@@ -6302,6 +6302,18 @@ export const chains: Chains = {
     iconURL:
       'https://ipfs.io/ipfs/bafkreihs2nrnizpcuzjmuu2yi7wrtwd7qlqje46qnil5bnntfbfkb2roea'
   },
+  480: {
+    name: 'World Chain',
+    chain: 'ETH',
+    rpc: [],
+    faucets: [],
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    infoURL: 'https://worldcoin.org',
+    shortName: 'wc',
+    chainId: 480,
+    networkId: 480,
+    status: 'incubating'
+  },
   499: {
     name: 'Rupaya',
     chain: 'RUPX',
@@ -8660,6 +8672,27 @@ export const chains: Chains = {
     ],
     iconURL:
       'https://ipfs.io/ipfs/bafkreig52paynhccs4o5ew6f7mk3xoqu2bqtitmfvlgnwarh2pm33gbdrq'
+  },
+  987: {
+    name: 'BinaryChain Mainnet',
+    chain: 'BinaryChain',
+    icon: 'binary',
+    rpc: ['https://rpc.binarychain.org'],
+    faucets: [],
+    nativeCurrency: { name: 'BINARY', symbol: 'BNRY', decimals: 18 },
+    infoURL: 'https://binarychain.org',
+    shortName: 'binary',
+    chainId: 987,
+    networkId: 987,
+    explorers: [
+      {
+        name: 'BinaryChain Explorer',
+        url: 'https://explorer.binarychain.org',
+        standard: 'EIP3091'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafybeifb4vnpn3jv7cfdlne2dwhe6agdnpgmu46a7nbc5divjuyaznkyay'
   },
   989: {
     name: 'TOP Mainnet',
@@ -20969,6 +21002,27 @@ export const chains: Chains = {
     iconURL:
       'https://ipfs.io/ipfs/QmcNGLzKyc7Gu2dgpBFF6t3KJwFuKC79D56DW8GTc5DWRw'
   },
+  9876: {
+    name: 'BinaryChain Testnet',
+    chain: 'BinaryChain',
+    icon: 'binary',
+    rpc: ['https://rpctestnet.binarychain.org'],
+    faucets: ['https://faucet.testnet.binarychain.org'],
+    nativeCurrency: { name: 'BINARY', symbol: 'BNRY', decimals: 18 },
+    infoURL: 'https://binarychain.org',
+    shortName: 'binarytestnet',
+    chainId: 9876,
+    networkId: 9876,
+    explorers: [
+      {
+        name: 'BinaryChain Testnet Explorer',
+        url: 'https://explorer.testnet.binarychain.org',
+        standard: 'EIP3091'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafybeifb4vnpn3jv7cfdlne2dwhe6agdnpgmu46a7nbc5divjuyaznkyay'
+  },
   9888: {
     name: 'Dogelayer Mainnet',
     chain: 'Dogelayer',
@@ -27955,7 +28009,8 @@ export const chains: Chains = {
     chain: 'Berachain bArtio',
     rpc: [
       'https://bartio.rpc.berachain.com',
-      'https://bera-testnet.nodeinfra.com'
+      'https://bera-testnet.nodeinfra.com',
+      'https://bartio.rpc.b-harvest.io'
     ],
     faucets: ['https://bartio.faucet.berachain.com'],
     nativeCurrency: { name: 'BERA Token', symbol: 'BERA', decimals: 18 },
@@ -33076,6 +33131,29 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ]
+  },
+  1234567: {
+    name: 'Sharecle Mainnet',
+    chain: 'SHARECLE',
+    icon: 'sharecle',
+    rpc: ['https://mainnet.sharecle.com'],
+    faucets: [],
+    nativeCurrency: { name: 'SHARECLE COIN', symbol: 'SHR', decimals: 18 },
+    infoURL: 'https://sharecle.com/',
+    shortName: 'shr',
+    chainId: 1234567,
+    networkId: 1234567,
+    slip44: 1,
+    explorers: [
+      {
+        name: 'Etherscan',
+        url: 'https://etherscan.io',
+        standard: 'none',
+        icon: 'sharecle'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafybeiaqaphacy5swvtyxw56ma5f5iewjcqspbgxr5l6ln2433liyw2djy'
   },
   1261120: {
     name: 'zKatana',
