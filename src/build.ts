@@ -74,9 +74,14 @@ const annotateIconUrls = async (chains: Chain[]) => {
     chains.map(async chain => {
       if (!chain.icon) return chain;
 
-      const [icon] = await got(
-        `https://raw.githubusercontent.com/ethereum-lists/chains/master/_data/icons/${chain.icon}.json`
-      ).json<Array<{ url: string }>>();
+      const iconUrl = `https://raw.githubusercontent.com/ethereum-lists/chains/master/_data/icons/${chain.icon}.json`
+
+      const [icon] = await got(iconUrl)
+        .json<Array<{ url: string }>>()
+        .catch(() => {
+          console.log(`Error fetching icon for ${chain.name}`)
+          return [];
+        })
 
       const iconURL = icon?.url?.replace('ipfs://', 'https://ipfs.io/ipfs/')
 
