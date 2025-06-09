@@ -3162,18 +3162,18 @@ export const chains: Chains = {
       'https://ipfs.io/ipfs/Qma7LpnkGjAN1dwL6VTXUYqzySNxjLg4br7J8UE4yZWYec'
   },
   140: {
-    name: 'Eternal Mainnet',
-    chain: 'ETE',
-    icon: 'eternal',
+    name: 'Eteria Mainnet',
+    chain: 'ERA',
+    icon: 'eteria',
     rpc: [
       'https://mainnet.eternalcoin.io/v1',
       'ws://mainnet.eternalcoin.io/v1/ws'
     ],
     features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
     faucets: [],
-    nativeCurrency: { name: 'Eternal', symbol: 'ETE', decimals: 18 },
-    infoURL: 'https://eternalcoin.io',
-    shortName: 'ETE',
+    nativeCurrency: { name: 'Eteria', symbol: 'ERA', decimals: 18 },
+    infoURL: 'https://eteria.io',
+    shortName: 'ERA',
     chainId: 140,
     networkId: 140,
     iconURL:
@@ -13015,6 +13015,7 @@ export const chains: Chains = {
     shortName: 'sei',
     chainId: 1329,
     networkId: 1329,
+    slip44: 19000118,
     icon: 'seiv2',
     explorers: [
       {
@@ -20589,6 +20590,36 @@ export const chains: Chains = {
     ],
     iconURL:
       'https://ipfs.io/ipfs/QmULpMFUvKSmJT8sWXS3WDnTm4EacgRbsEynDenpxcfrAj'
+  },
+  4207: {
+    name: 'Layer Edge Mainnet',
+    title: 'EDGEN',
+    chain: 'EDGEN',
+    rpc: [
+      'https://layeredge-mainnet-evm.itrocket.net',
+      'https://layeredge.rpc.subquery.network/public',
+      'https://rpc.layeredge.io',
+      'https://rpc2.layeredge.io',
+      'https://rpc.layeredge.foundation',
+      'https://rpc2.layeredge.foundation'
+    ],
+    faucets: [],
+    nativeCurrency: { name: 'Layer Edge', symbol: 'EDGEN', decimals: 18 },
+    infoURL: 'https://layeredge.io',
+    shortName: 'LayerEdge',
+    chainId: 4207,
+    networkId: 4207,
+    icon: 'edgen',
+    explorers: [
+      {
+        name: 'Layer Edge Explorer',
+        url: 'https://edgenscan.io',
+        icon: 'edgen',
+        standard: 'EIP3091'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/QmVwYkRWgXgoYDPgBFntxWYFquKusuMMVc8TG5hrEVnXLV'
   },
   4242: {
     name: 'Nexi Mainnet',
@@ -39225,31 +39256,21 @@ export const chains: Chains = {
     name: 'Plume Devnet (Legacy)',
     title: 'Plume Sepolia L2 Rollup Devnet (Legacy)',
     chain: 'PLUME Devnet Legacy',
-    rpc: [
-      'https://test-rpc.plumenetwork.xyz',
-      'wss://test-rpc.plumenetwork.xyz'
-    ],
+    rpc: [],
     faucets: [],
     nativeCurrency: {
       name: 'Plume Sepolia Ether',
       symbol: 'ETH',
       decimals: 18
     },
-    infoURL: 'https://plumenetwork.xyz/',
+    infoURL: 'https://plume.org',
     shortName: 'plume-devnet',
     chainId: 98864,
     networkId: 98864,
     slip44: 1,
     icon: 'plume',
     status: 'deprecated',
-    explorers: [
-      {
-        name: 'Blockscout',
-        url: 'https://test-explorer.plumenetwork.xyz',
-        icon: 'blockscout',
-        standard: 'EIP3091'
-      }
-    ],
+    explorers: [],
     parent: { type: 'L2', chain: 'eip155-11155111' },
     iconURL:
       'https://ipfs.io/ipfs/QmT7dJKK2VXMtF9mJ6EfMTJXBntJyVvZcA8beLA2RCFbsW'
@@ -39258,28 +39279,18 @@ export const chains: Chains = {
     name: 'Plume (Legacy)',
     title: 'Plume Ethereum L2 Rollup Mainnet (Legacy)',
     chain: 'PLUME Legacy',
-    rpc: ['https://rpc.plumenetwork.xyz', 'wss://rpc.plumenetwork.xyz'],
+    rpc: [],
     faucets: [],
     nativeCurrency: { name: 'Plume Ether', symbol: 'ETH', decimals: 18 },
-    infoURL: 'https://plumenetwork.xyz/',
+    infoURL: 'https://plume.org',
     shortName: 'plume',
     chainId: 98865,
     networkId: 98865,
     slip44: 1,
     icon: 'plume',
-    explorers: [
-      {
-        name: 'Blockscout',
-        url: 'https://explorer.plumenetwork.xyz',
-        icon: 'blockscout',
-        standard: 'EIP3091'
-      }
-    ],
-    parent: {
-      type: 'L2',
-      chain: 'eip155-1',
-      bridges: [{ url: 'https://bridge.plumenetwork.xyz' }]
-    },
+    status: 'deprecated',
+    explorers: [],
+    parent: { type: 'L2', chain: 'eip155-1' },
     iconURL:
       'https://ipfs.io/ipfs/QmT7dJKK2VXMtF9mJ6EfMTJXBntJyVvZcA8beLA2RCFbsW'
   },
@@ -39287,23 +39298,20 @@ export const chains: Chains = {
     name: 'Plume Mainnet',
     title: 'Plume Ethereum L2 Rollup Mainnet',
     chain: 'PLUME',
-    rpc: [
-      'https://phoenix-rpc.plumenetwork.xyz',
-      'wss://phoenix-rpc.plumenetwork.xyz'
-    ],
+    rpc: ['https://rpc.plume.org', 'wss://rpc.plume.org'],
     faucets: [],
     nativeCurrency: { name: 'Plume', symbol: 'PLUME', decimals: 18 },
-    infoURL: 'https://plumenetwork.xyz/',
+    infoURL: 'https://plume.org',
     shortName: 'plume-mainnet',
     chainId: 98866,
     networkId: 98866,
     slip44: 1,
     icon: 'plume',
-    status: 'incubating',
+    status: 'active',
     explorers: [
       {
         name: 'Blockscout',
-        url: 'https://phoenix-explorer.plumenetwork.xyz',
+        url: 'https://explorer.plume.org',
         icon: 'blockscout',
         standard: 'EIP3091'
       }
@@ -39311,7 +39319,7 @@ export const chains: Chains = {
     parent: {
       type: 'L2',
       chain: 'eip155-1',
-      bridges: [{ url: 'https://bridge.plumenetwork.xyz' }]
+      bridges: [{ url: 'https://bridge.plume.org' }]
     },
     iconURL:
       'https://ipfs.io/ipfs/QmT7dJKK2VXMtF9mJ6EfMTJXBntJyVvZcA8beLA2RCFbsW'
@@ -39320,23 +39328,20 @@ export const chains: Chains = {
     name: 'Plume Testnet',
     title: 'Plume Sepolia L2 Rollup Testnet',
     chain: 'PLUME Testnet',
-    rpc: [
-      'https://testnet-rpc.plumenetwork.xyz',
-      'wss://testnet-rpc.plumenetwork.xyz'
-    ],
-    faucets: ['https://faucet.plumenetwork.xyz'],
+    rpc: ['https://testnet-rpc.plume.org', 'wss://testnet-rpc.plume.org'],
+    faucets: ['https://faucet.plume.org'],
     nativeCurrency: { name: 'Plume', symbol: 'PLUME', decimals: 18 },
-    infoURL: 'https://plumenetwork.xyz/',
+    infoURL: 'https://plume.org',
     shortName: 'plume-testnet',
     chainId: 98867,
     networkId: 98867,
     slip44: 1,
     icon: 'plume',
-    status: 'incubating',
+    status: 'active',
     explorers: [
       {
         name: 'Blockscout',
-        url: 'https://testnet-explorer.plumenetwork.xyz',
+        url: 'https://testnet-explorer.plume.org',
         icon: 'blockscout',
         standard: 'EIP3091'
       }
@@ -39344,7 +39349,7 @@ export const chains: Chains = {
     parent: {
       type: 'L2',
       chain: 'eip155-11155111',
-      bridges: [{ url: 'https://testnet-bridge.plumenetwork.xyz' }]
+      bridges: [{ url: 'https://testnet-bridge.plume.org' }]
     },
     iconURL:
       'https://ipfs.io/ipfs/QmT7dJKK2VXMtF9mJ6EfMTJXBntJyVvZcA8beLA2RCFbsW'
@@ -43969,6 +43974,33 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ]
+  },
+  560013: {
+    name: 'Rogue Chain',
+    chainId: 560013,
+    shortName: 'rogue',
+    chain: 'ROGUE',
+    networkId: 560013,
+    icon: 'rogue',
+    nativeCurrency: { name: 'Rogue', symbol: 'ROGUE', decimals: 18 },
+    rpc: ['https://rpc.roguechain.io/rpc', 'wss://rpc.roguechain.io/ws'],
+    faucets: [],
+    explorers: [
+      {
+        name: 'Roguescan',
+        url: 'https://roguescan.io',
+        icon: 'rogue',
+        standard: 'EIP3091'
+      }
+    ],
+    infoURL: 'https://roguechain.io',
+    parent: {
+      type: 'L2',
+      chain: 'eip155-42161',
+      bridges: [{ url: 'https://bridge.arbitrum.io' }]
+    },
+    iconURL:
+      'https://ipfs.io/ipfs/Qmay8Z3yhJR4st6iAVmqTdM6nFc9zYSPq4tucDaiPheAjE'
   },
   560048: {
     name: 'Ethereum Hoodi',
@@ -49100,7 +49132,7 @@ export const chains: Chains = {
       symbol: 'ETH',
       decimals: 18
     },
-    infoURL: 'https://plumenetwork.xyz/',
+    infoURL: 'https://plume.org',
     shortName: 'plume-testnet-legacy',
     chainId: 161221135,
     networkId: 161221135,
