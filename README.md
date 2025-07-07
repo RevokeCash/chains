@@ -1,4 +1,4 @@
-[![Publish](https://github.com/RevokeCash/chains/actions/workflows/publish-release.yml/badge.svg)](https://github.com/RevokeCash/chains/actions/workflows/publish-release.yml) ![npm](https://img.shields.io/npm/v/@revoke.cash/chains?logoColor=blue)
+[![Publish](https://github.com/RevokeCash/chains/actions/workflows/publish-release.yml/badge.svg)](https://github.com/RevokeCash/chains/actions/workflows/publish-release.yml) [![npm](https://img.shields.io/npm/v/@revoke.cash/chains?logoColor=blue)](https://www.npmjs.com/package/@revoke.cash/chains)
 
 # Eth Chains
 
