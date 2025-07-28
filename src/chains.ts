@@ -1306,6 +1306,7 @@ export const chains: Chains = {
       'https://rpc.syscoin.org',
       'https://rpc.ankr.com/syscoin/${ANKR_API_KEY}',
       'https://syscoin.public-rpc.com',
+      'https://57.rpc.thirdweb.com',
       'wss://rpc.syscoin.org/wss',
       'https://syscoin-evm.publicnode.com',
       'wss://syscoin-evm.publicnode.com'
@@ -6264,19 +6265,20 @@ export const chains: Chains = {
     ]
   },
   323: {
-    name: 'Cosvm Mainnet',
-    chain: 'CVM',
-    rpc: ['https://rpc.cosvm.net'],
+    name: 'BuyCex Infinity Chain',
+    chain: 'BUYCEX',
+    rpc: ['https://rpc.buycex.net', 'wss://socket.buycex.net'],
     faucets: [],
-    nativeCurrency: { name: 'Cosvm', symbol: 'CVM', decimals: 18 },
-    infoURL: 'https://cosvm.network',
-    shortName: 'cvm',
+    nativeCurrency: { name: 'Buycex', symbol: 'BCX', decimals: 18 },
+    infoURL: 'https://infinity.buycex.com',
+    shortName: 'buycex',
     chainId: 323,
     networkId: 323,
+    status: 'active',
     explorers: [
       {
         name: 'Blockscout',
-        url: 'https://explorer.cosvm.net',
+        url: 'https://buycex.com',
         icon: 'blockscout',
         standard: 'EIP3091'
       }
@@ -9741,6 +9743,22 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ]
+  },
+  869: {
+    name: 'WorldMobileChain-Mainnet',
+    chain: 'WMC',
+    rpc: [],
+    faucets: [],
+    nativeCurrency: {
+      name: 'World Mobile Token',
+      symbol: 'WMTX',
+      decimals: 18
+    },
+    infoURL: 'https://worldmobile.io/the-chain',
+    shortName: 'WMC',
+    chainId: 869,
+    networkId: 869,
+    status: 'incubating'
   },
   871: {
     name: 'Electra Test Network',
@@ -15325,6 +15343,27 @@ export const chains: Chains = {
     iconURL:
       'https://ipfs.io/ipfs/QmbnLDuVc4JReFysyKvmpuqUtj9HCus6qoKD5nQ9QkokzK'
   },
+  1962: {
+    name: 'T-Rex Testnet',
+    chain: 'T-Rex',
+    rpc: ['https://testnetrpc.trex.xyz'],
+    faucets: [],
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    infoURL: 'https://trex.xyz/',
+    shortName: 'TREX',
+    chainId: 1962,
+    networkId: 1962,
+    icon: 'trex',
+    explorers: [
+      {
+        name: 'T-Rex Testnet explorer',
+        url: 'https://testnet.trex.xyz',
+        standard: 'none'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreienf63hqo2stiq2wqiprvhowrv3cvhjeko2u3h5vcvjby5ix6ud7a'
+  },
   1967: {
     name: 'Eleanor',
     title: 'Metatime Testnet Eleanor',
@@ -19136,15 +19175,13 @@ export const chains: Chains = {
     chain: 'peaq',
     icon: 'peaq',
     rpc: [
-      'https://peaq.api.onfinality.io/public',
-      'https://peaq-rpc.dwellir.com',
-      'https://peaq-rpc.publicnode.com',
-      'https://evm.peaq.network',
-      'https://responsive-powerful-mansion.peaq-mainnet.quiknode.pro/29963d0a2deee01a20b091926b08d68db12bc68b'
+      'https://quicknode1.peaq.xyz',
+      'https://quicknode2.peaq.xyz',
+      'https://quicknode3.peaq.xyz'
     ],
     faucets: [],
     nativeCurrency: { name: 'peaq', symbol: 'PEAQ', decimals: 18 },
-    infoURL: 'https://www.peaq.network',
+    infoURL: 'https://www.peaq.xyz',
     shortName: 'PEAQ',
     chainId: 3338,
     networkId: 3338,
@@ -20174,14 +20211,14 @@ export const chains: Chains = {
       'https://ipfs.io/ipfs/QmUTDMvoY7JgDs9sZuuBhsyJz6B2dNfc5jj6xUj355be2C'
   },
   4048: {
-    name: 'GAN Testnet',
+    name: 'GANchain L1',
     chain: 'GAN',
     icon: 'gpu',
     rpc: ['https://rpc.gpu.net'],
     faucets: [],
-    nativeCurrency: { name: 'GP Token', symbol: 'GP', decimals: 18 },
+    nativeCurrency: { name: 'GPUnet', symbol: 'GPU', decimals: 18 },
     infoURL: 'https://docs.gpu.net/',
-    shortName: 'GANTestnet',
+    shortName: 'GANchain',
     chainId: 4048,
     networkId: 4048,
     explorers: [
@@ -20689,9 +20726,7 @@ export const chains: Chains = {
       'https://layeredge-mainnet-evm.itrocket.net',
       'https://layeredge.rpc.subquery.network/public',
       'https://rpc.layeredge.io',
-      'https://rpc2.layeredge.io',
-      'https://rpc.layeredge.foundation',
-      'https://rpc2.layeredge.foundation'
+      'https://rpc.layeredge.foundation'
     ],
     faucets: [],
     nativeCurrency: { name: 'Layer Edge', symbol: 'EDGEN', decimals: 18 },
@@ -21929,6 +21964,8 @@ export const chains: Chains = {
     rpc: [
       'https://rpc1.bahamut.io',
       'https://rpc2.bahamut.io',
+      'https://rpc1.ftnscan.io',
+      'https://rpc2.ftnscan.io',
       'wss://ws1.sahara.bahamutchain.com',
       'wss://ws2.sahara.bahamutchain.com',
       'https://bahamut-rpc.publicnode.com',
@@ -21946,7 +21983,8 @@ export const chains: Chains = {
         name: 'blockscout',
         url: 'https://ftnscan.com',
         standard: 'none'
-      }
+      },
+      { name: 'blockscout', url: 'https://ftnscan.io', standard: 'none' }
     ],
     iconURL:
       'https://ipfs.io/ipfs/QmSemioP83RXnDWwTZbet8VpwJxcFRboX4B3pcdhLZGodP'
@@ -27236,9 +27274,9 @@ export const chains: Chains = {
   9746: {
     name: 'Plasma Testnet',
     chain: 'Plasma',
-    rpc: ['https://ultra-quick-paper.plasma-testnet.quiknode.pro'],
+    rpc: ['https://testnet-rpc.plasma.to'],
     faucets: [],
-    nativeCurrency: { name: 'Testnet Plasma', symbol: 'tXPL', decimals: 18 },
+    nativeCurrency: { name: 'Testnet Plasma', symbol: 'XPL', decimals: 18 },
     infoURL: 'https://plasma.to',
     shortName: 'plasma',
     chainId: 9746,
@@ -27246,8 +27284,8 @@ export const chains: Chains = {
     icon: 'plasma',
     explorers: [
       {
-        name: 'Plasma Explorer',
-        url: 'https://plasma.gas.zip',
+        name: 'RouteScan',
+        url: 'https://testnet.plasmaexplorer.io',
         icon: 'plasma',
         standard: 'EIP3091'
       }
@@ -37899,7 +37937,7 @@ export const chains: Chains = {
       'https://ipfs.io/ipfs/QmRNqgazYuxUa5WdddFPftTWiP3KwzBMgV9Z19QWnLMETc'
   },
   80008: {
-    name: 'Polynomia Sepolia',
+    name: 'Polynomial Sepolia',
     chain: 'polynomialSepolia',
     rpc: ['https://rpc.sepolia.polynomial.fi'],
     faucets: [],
@@ -47259,6 +47297,31 @@ export const chains: Chains = {
       }
     ]
   },
+  6985385: {
+    name: 'Humanity Protocol',
+    chain: 'Humanity',
+    rpc: ['https://humanity-mainnet.g.alchemy.com/public'],
+    faucets: [],
+    nativeCurrency: { name: 'H', symbol: 'H', decimals: 18 },
+    infoURL: 'https://humanity.org',
+    parent: {
+      type: 'L2',
+      chain: 'eip155-42161',
+      bridges: [{ url: 'https://bridge.arbitrum.io' }]
+    },
+    shortName: 'hp',
+    chainId: 6985385,
+    networkId: 6985385,
+    status: 'active',
+    explorers: [
+      {
+        name: 'Humanity Mainnet explorer',
+        url: 'https://humanity-mainnet.explorer.alchemy.com',
+        standard: 'none'
+      }
+    ],
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }]
+  },
   7082400: {
     name: 'COTI Testnet',
     title: 'COTI Testnet',
@@ -49929,6 +49992,18 @@ export const chains: Chains = {
       }
     ]
   },
+  420420422: {
+    name: 'Paseo PassetHub',
+    chain: 'PAS',
+    rpc: ['https://testnet-passet-hub-eth-rpc.polkadot.io'],
+    faucets: ['https://faucet.polkadot.io/?parachain=1111'],
+    nativeCurrency: { name: 'PAS', symbol: 'PAS', decimals: 18 },
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    infoURL: 'https://polkadot.network',
+    shortName: 'pas',
+    chainId: 420420422,
+    networkId: 420420422
+  },
   476158412: {
     name: 'Deprecated SKALE Europa Hub Testnet',
     title: 'Deprecated Europa Hub Testnet',
@@ -51144,6 +51219,35 @@ export const chains: Chains = {
     shortName: 'hop',
     chainId: 2021121117,
     networkId: 2021121117
+  },
+  2030232745: {
+    name: 'Lumia Beam Testnet',
+    shortName: 'lumia-beam-testnet',
+    title: 'Lumia Beam Testnet',
+    chain: 'ETH',
+    icon: 'lumia',
+    rpc: ['https://beam-rpc.lumia.org'],
+    faucets: ['https://beam-faucet.lumia.org/'],
+    nativeCurrency: { name: 'Lumia', symbol: 'LUMIA', decimals: 18 },
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    infoURL: 'https://lumia.org',
+    chainId: 2030232745,
+    networkId: 2030232745,
+    explorers: [
+      {
+        name: 'Lumia Beam Testnet Explorer',
+        url: 'https://beam-explorer.lumia.org',
+        icon: 'lumia',
+        standard: 'EIP3091'
+      }
+    ],
+    parent: {
+      type: 'L2',
+      chain: 'eip155-1',
+      bridges: [{ url: 'https://beam-bridge.lumia.org' }]
+    },
+    iconURL:
+      'https://ipfs.io/ipfs/QmV3V19LTs7RobiBo4pgwvNGY7AXEXDTVbRPuB8pPvmxi4'
   },
   2046399126: {
     name: 'SKALE Europa Hub',
