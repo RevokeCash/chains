@@ -27292,6 +27292,21 @@ export const chains: Chains = {
       bridges: [{ url: 'https://gateway.boba.network' }]
     }
   },
+  9745: {
+    name: 'Plasma Mainnet',
+    chain: 'Plasma',
+    rpc: [],
+    faucets: [],
+    nativeCurrency: { name: 'Plasma', symbol: 'XPL', decimals: 18 },
+    infoURL: 'https://plasma.to',
+    shortName: 'plasma-mainnet',
+    chainId: 9745,
+    networkId: 9745,
+    icon: 'plasma',
+    explorers: [],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreicgr636cvsomnqj3ikgdpixfv7eh2nr2u3k7v423raav2lrpsvfwy'
+  },
   9746: {
     name: 'Plasma Testnet',
     chain: 'Plasma',
@@ -27299,20 +27314,19 @@ export const chains: Chains = {
     faucets: [],
     nativeCurrency: { name: 'Testnet Plasma', symbol: 'XPL', decimals: 18 },
     infoURL: 'https://plasma.to',
-    shortName: 'plasma',
+    shortName: 'plasma-testnet',
     chainId: 9746,
     networkId: 9746,
     icon: 'plasma',
     explorers: [
       {
-        name: 'RouteScan',
-        url: 'https://testnet.plasmaexplorer.io',
-        icon: 'plasma',
+        name: 'Routescan',
+        url: 'https://testnet.plasmascan.to',
         standard: 'EIP3091'
       }
     ],
     iconURL:
-      'https://ipfs.io/ipfs/QmV34vcJ1sDpUyDJkskLv77H99Nxn8qRf6TvscJcywYwG6'
+      'https://ipfs.io/ipfs/bafkreicgr636cvsomnqj3ikgdpixfv7eh2nr2u3k7v423raav2lrpsvfwy'
   },
   9768: {
     name: 'MainnetZ Testnet',
@@ -34017,6 +34031,11 @@ export const chains: Chains = {
     rpc: ['https://forno.celo.org', 'wss://forno.celo.org/ws'],
     faucets: [],
     infoURL: 'https://docs.celo.org/',
+    parent: {
+      type: 'L2',
+      chain: 'eip155-1',
+      bridges: [{ url: 'https://superbridge.app/celo' }]
+    },
     explorers: [
       {
         name: 'Celoscan',
@@ -34025,8 +34044,8 @@ export const chains: Chains = {
       },
       {
         name: 'blockscout',
-        url: 'https://explorer.celo.org',
-        standard: 'none'
+        url: 'https://celo.blockscout.com',
+        standard: 'EIP3091'
       }
     ]
   },
@@ -40709,6 +40728,29 @@ export const chains: Chains = {
     ],
     iconURL:
       'https://ipfs.io/ipfs/QmcCFUTStKKJKfzTwrjfMFoVaPCMsvAvWXRdDkYMvCkEs3'
+  },
+  120893: {
+    name: 'Sova Sepolia Testnet',
+    chain: 'ETH',
+    icon: 'sova',
+    rpc: ['https://rpc.testnet.sova.io'],
+    faucets: [],
+    nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
+    infoURL: 'https://sova.io',
+    shortName: 'sovasep',
+    chainId: 120893,
+    networkId: 120893,
+    slip44: 1,
+    explorers: [
+      {
+        name: 'blockscout',
+        url: 'https://explorer.testnet.sova.io',
+        icon: 'blockscout',
+        standard: 'EIP3091'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreid7xn7bs3l66axinbq25gl7ypdlwbinnbit4bz3qcy36fia4icrgm'
   },
   121212: {
     name: 'Rome Devnet Esquiline',
@@ -47861,6 +47903,37 @@ export const chains: Chains = {
     ],
     iconURL:
       'https://ipfs.io/ipfs/QmWAa7JayD8HCtAMXezzUNcUoi2Rikqpu2WmrHpFBmDEez'
+  },
+  11142220: {
+    name: 'Celo Sepolia Testnet',
+    chainId: 11142220,
+    shortName: 'celo-sep',
+    chain: 'CELO',
+    networkId: 11142220,
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    slip44: 60,
+    nativeCurrency: { name: 'CELO-S', symbol: 'CELO', decimals: 18 },
+    parent: {
+      type: 'L2',
+      chain: 'eip155-11155111',
+      bridges: [
+        {
+          url:
+            'https://superbridge.app/?fromChainId=11155111&toChainId=11142220'
+        }
+      ]
+    },
+    rpc: ['https://forno.celo-sepolia.celo-testnet.org'],
+    faucets: ['https://faucet.celo.org'],
+    infoURL: 'https://docs.celo.org',
+    explorers: [
+      {
+        name: 'Celo Sepolia Explorer',
+        url: 'https://celo-sepolia.blockscout.com',
+        icon: 'blockscout',
+        standard: 'EIP3091'
+      }
+    ]
   },
   11145513: {
     name: 'Blessnet Sepolia',
