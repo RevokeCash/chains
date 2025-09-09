@@ -3822,7 +3822,7 @@ export const chains: Chains = {
     chain: 'ENI',
     rpc: ['https://rpc.eniac.network'],
     faucets: [],
-    nativeCurrency: { name: 'ENI', symbol: 'ENI', decimals: 18 },
+    nativeCurrency: { name: 'EGAS', symbol: 'EGAS', decimals: 18 },
     infoURL: 'https://eniac.network/',
     shortName: 'eni',
     chainId: 173,
@@ -3902,8 +3902,8 @@ export const chains: Chains = {
     parent: { type: 'L2', chain: 'eip155-1' }
   },
   178: {
-    name: 'ABEY Testnet',
-    chain: 'ABEY',
+    name: 'Abey Testnet',
+    chain: 'Abey',
     rpc: ['https://testrpc.abeychain.com'],
     features: [{ name: 'EIP155' }],
     faucets: ['https://testnet-faucet.abeychain.com'],
@@ -3912,17 +3912,21 @@ export const chains: Chains = {
     shortName: 'abeyt',
     chainId: 178,
     networkId: 178,
+    icon: 'abey',
     explorers: [
       {
         name: 'abeyscan-testnet',
         url: 'https://testnet.abeyscan.com',
+        icon: 'abey',
         standard: 'EIP3091'
       }
-    ]
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreicaucnt5aqvwq6pw2fzvotzonkeaf7cj5yqt3m2wyhtusblroi4se'
   },
   179: {
-    name: 'ABEY Mainnet',
-    chain: 'ABEY',
+    name: 'Abey Mainnet',
+    chain: 'Abey',
     rpc: ['https://rpc.abeychain.com'],
     features: [{ name: 'EIP155' }],
     faucets: [],
@@ -3931,13 +3935,17 @@ export const chains: Chains = {
     shortName: 'abey',
     chainId: 179,
     networkId: 179,
+    icon: 'abey',
     explorers: [
       {
         name: 'abeyscan',
         url: 'https://abeyscan.com',
+        icon: 'abey',
         standard: 'EIP3091'
       }
-    ]
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreicaucnt5aqvwq6pw2fzvotzonkeaf7cj5yqt3m2wyhtusblroi4se'
   },
   180: {
     name: 'AME Chain Mainnet',
@@ -13945,6 +13953,32 @@ export const chains: Chains = {
     iconURL:
       'https://ipfs.io/ipfs/QmQnf8Fp3xVimXszkCt7EfKWjUzGWK9HBq9EQ8xXbm1APH'
   },
+  1612: {
+    name: 'OpenLedger Mainnet',
+    chain: 'OpenLedger',
+    rpc: ['https://rpc.openledger.xyz'],
+    faucets: [],
+    nativeCurrency: { name: 'Open', symbol: 'OPEN', decimals: 18 },
+    infoURL: 'https://www.openledger.xyz',
+    shortName: 'open',
+    chainId: 1612,
+    networkId: 1612,
+    icon: 'openledger',
+    explorers: [
+      {
+        name: 'OpenLedger Explorer',
+        url: 'https://scan.openledger.xyz',
+        standard: 'EIP3091'
+      }
+    ],
+    parent: {
+      type: 'L2',
+      chain: 'eip155-1',
+      bridges: [{ url: 'https://bridge.openledger.xyz/' }]
+    },
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreia37de5s5jtm5t74jtbx5clas3dnbojnrue7ls7ricbnr4kmgcfca'
+  },
   1617: {
     name: 'Ethereum Inscription Mainnet',
     chain: 'ETINS',
@@ -22828,6 +22862,32 @@ export const chains: Chains = {
       }
     ]
   },
+  5887: {
+    name: 'MANTRACHAIN Testnet',
+    chain: 'Dukong',
+    rpc: [
+      'https://evm.dukong.mantrachain.io',
+      'wss://evm.dukong.mantrachain.io/ws'
+    ],
+    faucets: ['https://faucet.dukong.mantrachain.io'],
+    nativeCurrency: { name: 'OM', symbol: 'OM', decimals: 18 },
+    infoURL: 'https://mantrachain.io',
+    shortName: 'dukong',
+    chainId: 5887,
+    networkId: 5887,
+    slip44: 1,
+    icon: 'om',
+    explorers: [
+      {
+        name: 'Dukong Explorer',
+        url: 'http://mantrascan.io',
+        standard: 'none',
+        icon: 'om'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreiftgt747chqsw67a3jyklr52op5rozqmi3qnp4edwjcf2gxabwdnu'
+  },
   6000: {
     name: 'BounceBit Testnet',
     chain: 'BounceBit',
@@ -27292,6 +27352,27 @@ export const chains: Chains = {
       bridges: [{ url: 'https://gateway.boba.network' }]
     }
   },
+  9745: {
+    name: 'Plasma Mainnet',
+    chain: 'Plasma',
+    rpc: ['https://rpc.plasma.to'],
+    faucets: [],
+    nativeCurrency: { name: 'Plasma', symbol: 'XPL', decimals: 18 },
+    infoURL: 'https://plasma.to',
+    shortName: 'plasma',
+    chainId: 9745,
+    networkId: 9745,
+    icon: 'plasma',
+    explorers: [
+      {
+        name: 'Routescan',
+        url: 'https://plasmascan.to',
+        standard: 'EIP3091'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreicgr636cvsomnqj3ikgdpixfv7eh2nr2u3k7v423raav2lrpsvfwy'
+  },
   9746: {
     name: 'Plasma Testnet',
     chain: 'Plasma',
@@ -27299,20 +27380,34 @@ export const chains: Chains = {
     faucets: [],
     nativeCurrency: { name: 'Testnet Plasma', symbol: 'XPL', decimals: 18 },
     infoURL: 'https://plasma.to',
-    shortName: 'plasma',
+    shortName: 'plasma-testnet',
     chainId: 9746,
     networkId: 9746,
     icon: 'plasma',
     explorers: [
       {
-        name: 'RouteScan',
-        url: 'https://testnet.plasmaexplorer.io',
-        icon: 'plasma',
+        name: 'Routescan',
+        url: 'https://testnet.plasmascan.to',
         standard: 'EIP3091'
       }
     ],
     iconURL:
-      'https://ipfs.io/ipfs/QmV34vcJ1sDpUyDJkskLv77H99Nxn8qRf6TvscJcywYwG6'
+      'https://ipfs.io/ipfs/bafkreicgr636cvsomnqj3ikgdpixfv7eh2nr2u3k7v423raav2lrpsvfwy'
+  },
+  9747: {
+    name: 'Plasma Devnet',
+    chain: 'Plasma',
+    rpc: ['https://devnet-rpc.plasma.to'],
+    faucets: [],
+    nativeCurrency: { name: 'Devnet Plasma', symbol: 'XPL', decimals: 18 },
+    infoURL: 'https://plasma.to',
+    shortName: 'plasma-devnet',
+    chainId: 9747,
+    networkId: 9747,
+    icon: 'plasma',
+    explorers: [],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreicgr636cvsomnqj3ikgdpixfv7eh2nr2u3k7v423raav2lrpsvfwy'
   },
   9768: {
     name: 'MainnetZ Testnet',
@@ -34017,6 +34112,11 @@ export const chains: Chains = {
     rpc: ['https://forno.celo.org', 'wss://forno.celo.org/ws'],
     faucets: [],
     infoURL: 'https://docs.celo.org/',
+    parent: {
+      type: 'L2',
+      chain: 'eip155-1',
+      bridges: [{ url: 'https://superbridge.app/celo' }]
+    },
     explorers: [
       {
         name: 'Celoscan',
@@ -34025,8 +34125,8 @@ export const chains: Chains = {
       },
       {
         name: 'blockscout',
-        url: 'https://explorer.celo.org',
-        standard: 'none'
+        url: 'https://celo.blockscout.com',
+        standard: 'EIP3091'
       }
     ]
   },
@@ -40710,6 +40810,29 @@ export const chains: Chains = {
     iconURL:
       'https://ipfs.io/ipfs/QmcCFUTStKKJKfzTwrjfMFoVaPCMsvAvWXRdDkYMvCkEs3'
   },
+  120893: {
+    name: 'Sova Sepolia Testnet',
+    chain: 'ETH',
+    icon: 'sova',
+    rpc: ['https://rpc.testnet.sova.io'],
+    faucets: [],
+    nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
+    infoURL: 'https://sova.io',
+    shortName: 'sovasep',
+    chainId: 120893,
+    networkId: 120893,
+    slip44: 1,
+    explorers: [
+      {
+        name: 'blockscout',
+        url: 'https://explorer.testnet.sova.io',
+        icon: 'blockscout',
+        standard: 'EIP3091'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreid7xn7bs3l66axinbq25gl7ypdlwbinnbit4bz3qcy36fia4icrgm'
+  },
   121212: {
     name: 'Rome Devnet Esquiline',
     chain: 'ROME',
@@ -47335,7 +47458,7 @@ export const chains: Chains = {
     chain: 'ENI',
     rpc: ['https://rpc-testnet.eniac.network'],
     faucets: [],
-    nativeCurrency: { name: 'ENI Testnet Token', symbol: 'ENI', decimals: 18 },
+    nativeCurrency: { name: 'EGAS', symbol: 'EGAS', decimals: 18 },
     infoURL: 'https://eniac.network/',
     shortName: 'eni-test',
     chainId: 6912115,
@@ -47861,6 +47984,37 @@ export const chains: Chains = {
     ],
     iconURL:
       'https://ipfs.io/ipfs/QmWAa7JayD8HCtAMXezzUNcUoi2Rikqpu2WmrHpFBmDEez'
+  },
+  11142220: {
+    name: 'Celo Sepolia Testnet',
+    chainId: 11142220,
+    shortName: 'celo-sep',
+    chain: 'CELO',
+    networkId: 11142220,
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    slip44: 60,
+    nativeCurrency: { name: 'CELO-S', symbol: 'CELO', decimals: 18 },
+    parent: {
+      type: 'L2',
+      chain: 'eip155-11155111',
+      bridges: [
+        {
+          url:
+            'https://superbridge.app/?fromChainId=11155111&toChainId=11142220'
+        }
+      ]
+    },
+    rpc: ['https://forno.celo-sepolia.celo-testnet.org'],
+    faucets: ['https://faucet.celo.org'],
+    infoURL: 'https://docs.celo.org',
+    explorers: [
+      {
+        name: 'Celo Sepolia Explorer',
+        url: 'https://celo-sepolia.blockscout.com',
+        icon: 'blockscout',
+        standard: 'EIP3091'
+      }
+    ]
   },
   11145513: {
     name: 'Blessnet Sepolia',
