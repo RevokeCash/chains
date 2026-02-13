@@ -1,22 +1,27 @@
 name: Create Update PR
+
 on:
   workflow_dispatch:
   # Auto-update every week on midnight Monday
   schedule:
     - cron: '0 0 * * 1'
+
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: '24'
           registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies
-        run: yarn
-      - name: Generate new files
-        run: yarn generate && yarn build
+      - run: yarn
+      - run: yarn generate && yarn build
       - name: Update version (major if there are deletions in enums.ts, otherwise minor)
         run: git diff src/enums.ts | grep "^-[^-]" && yarn version --major --no-git-tag-version || yarn version --minor --no-git-tag-version
       - name: Commit and create PR

@@ -1,28 +1,30 @@
 name: Publish Release
+
 on:
   workflow_dispatch:
   push:
     branches:
       - main
+
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
-  update:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: '24'
           registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies
-        run: yarn
-      - name: Publish to npm
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: yarn
+      - run: npm publish
       - name: Get package.json info
         id: package_json
         uses: jaywcjlove/github-action-package@main
-      - name: Create Release
+      - name: Create GitHub Release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
