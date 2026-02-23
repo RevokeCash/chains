@@ -13011,6 +13011,32 @@ export const chains: Chains = {
     iconURL:
       'https://ipfs.io/ipfs/QmbpYHpqR68uuJZCwm1CXtN51zi744qWzZ32ob9BKfgFTV'
   },
+  1270: {
+    name: 'Irys Testnet V1',
+    chain: 'IRYS',
+    rpc: [
+      'https://testnet-rpc.irys.xyz/v1/execution-rpc',
+      'https://testnet-rpc-2.irys.xyz/v1/execution-rpc'
+    ],
+    faucets: [],
+    nativeCurrency: { name: 'Irys', symbol: 'IRYS', decimals: 18 },
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    infoURL: 'https://irys.xyz',
+    shortName: 'irys-testnet-v1',
+    chainId: 1270,
+    networkId: 1270,
+    icon: 'irys',
+    explorers: [
+      {
+        name: 'Irys Testnet Explorer',
+        url: 'https://testnet-explorer.irys.xyz',
+        icon: 'irys',
+        standard: 'none'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/QmdGLHxA4W4N2h7y8ixSUEKhESCT9qmJsenGuyskqr7x1e'
+  },
   1280: {
     name: 'HALO Mainnet',
     chain: 'HALO',
@@ -16699,6 +16725,7 @@ export const chains: Chains = {
     shortName: 'ron',
     chainId: 2020,
     networkId: 2020,
+    icon: 'ronin',
     redFlags: ['reusedChainId'],
     explorers: [
       {
@@ -16706,7 +16733,9 @@ export const chains: Chains = {
         url: 'https://app.roninchain.com',
         standard: 'EIP3091'
       }
-    ]
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreicwyre2qm2g2g27rffua7sb3dsqx7kka4rcjnb5wzcwhdlemyjn5m'
   },
   2021: {
     name: 'Edgeware EdgeEVM Mainnet',
@@ -19880,7 +19909,10 @@ export const chains: Chains = {
   3282: {
     name: 'Irys Mainnet Beta',
     chain: 'IRYS',
-    rpc: ['https://mainnet-beta-rpc.irys.xyz/v1/execution-rpc'],
+    rpc: [
+      'https://mainnet-beta-rpc.irys.xyz/v1/execution-rpc',
+      'https://mainnet-beta-rpc-2.irys.xyz/v1/execution-rpc'
+    ],
     faucets: [],
     nativeCurrency: { name: 'Irys', symbol: 'IRYS', decimals: 18 },
     features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
@@ -35346,6 +35378,56 @@ export const chains: Chains = {
     iconURL:
       'https://ipfs.io/ipfs/bafkreice4fkfrfggny5m3btlquzrimfg7jiyebvslmsknnqhivznh4u2la'
   },
+  36968: {
+    name: 'AMA Testnet',
+    chain: 'AMA',
+    rpc: ['https://testnet-rpc.ama.one'],
+    faucets: ['https://mcp.ama.one/testnet-faucet'],
+    nativeCurrency: { name: 'AMA', symbol: 'AMA', decimals: 9 },
+    infoURL: 'https://ama.one',
+    shortName: 'AMA-TESTNET',
+    chainId: 36968,
+    networkId: 36968,
+    slip44: 1,
+    status: 'incubating',
+    explorers: [
+      {
+        name: 'AMA Explorer Testnet',
+        url: 'https://testnet-ama.ddns.net',
+        standard: 'none'
+      },
+      {
+        name: 'AMA Explorer Testnet Alt',
+        url: 'https://testnet.explorer.ama.one',
+        standard: 'none'
+      }
+    ]
+  },
+  36969: {
+    name: 'AMA Mainnet',
+    chain: 'AMA',
+    rpc: ['https://mainnet-rpc.ama.one'],
+    faucets: [],
+    nativeCurrency: { name: 'AMA', symbol: 'AMA', decimals: 9 },
+    infoURL: 'https://ama.one',
+    shortName: 'AMA',
+    chainId: 36969,
+    networkId: 36969,
+    slip44: 36969,
+    status: 'active',
+    explorers: [
+      {
+        name: 'AMA Explorer Mainnet',
+        url: 'https://ama-explorer.ddns.net',
+        standard: 'none'
+      },
+      {
+        name: 'AMA Explorer Mainnet Alt',
+        url: 'https://explorer.ama.one',
+        standard: 'none'
+      }
+    ]
+  },
   37111: {
     name: 'Lens Testnet',
     title: 'Lens Network Sepolia Testnet',
@@ -44575,6 +44657,41 @@ export const chains: Chains = {
     ],
     iconURL:
       'https://ipfs.io/ipfs/QmTYAGtxSChGszStYeGM3knudcXB1JH4rPwMjhz3yvSXkW'
+  },
+  202601: {
+    name: 'Ronin Saigon Testnet',
+    chain: 'ronin',
+    rpc: [
+      'https://saigon-testnet.roninchain.com/rpc',
+      'https://ronin-saigon.drpc.org'
+    ],
+    faucets: ['https://faucet.roninchain.com/'],
+    nativeCurrency: { name: 'Ronin', symbol: 'RON', decimals: 18 },
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    infoURL: 'https://roninchain.com',
+    shortName: 'ronin-saigon',
+    chainId: 202601,
+    networkId: 202601,
+    icon: 'ronin',
+    explorers: [
+      {
+        name: 'Ronin Saigon Explorer',
+        url: 'https://saigon-explorer.roninchain.com',
+        standard: 'EIP3091'
+      }
+    ],
+    parent: {
+      type: 'L2',
+      chain: 'eip155-11155111',
+      bridges: [
+        {
+          url:
+            'https://saigon-testnet-cc58e966ql-f24a704b3d708471.testnets.rollbridge.app/'
+        }
+      ]
+    },
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreicwyre2qm2g2g27rffua7sb3dsqx7kka4rcjnb5wzcwhdlemyjn5m'
   },
   202624: {
     name: 'Jellie',
