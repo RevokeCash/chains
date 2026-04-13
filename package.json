@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/RevokeCash/chains.git"
   },
-  "version": "75.1.0",
+  "version": "76.0.0",
   "description": "Helper module for getting EVM chains info.",
   "author": "Revoke.cash",
   "contributors": [
