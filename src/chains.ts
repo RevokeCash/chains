@@ -6899,8 +6899,7 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ],
-    iconURL:
-      'https://ipfs.io/ipfs/QmfQ1yae6uvXgBSwnwJM4Mtp8ctH66tM6mB1Hsgu4XvsC9'
+    iconURL: undefined
   },
   373: {
     name: 'Status Network',
@@ -7257,8 +7256,7 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ],
-    iconURL:
-      'https://ipfs.io/ipfs/bafkreibjsc3gww3moti27za2hpyq552aevux3yv5y2ntdklksyr4v4uavy'
+    iconURL: undefined
   },
   416: {
     name: 'SX Network Mainnet',
@@ -7508,8 +7506,7 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ],
-    iconURL:
-      'https://ipfs.io/ipfs/bafkreiek7pg3hualucn2zd2wixsd5tjgewugdgpeetjqx7ue5raf6ca3d4'
+    iconURL: undefined
   },
   443: {
     name: 'Ten Testnet',
@@ -30316,8 +30313,7 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ],
-    iconURL:
-      'https://ipfs.io/ipfs/QmV1Q7Q9XKRin5C5Qg6TTb3BnqmC1Qb6jyebUbTMXGPV1L'
+    iconURL: undefined
   },
   9897: {
     name: 'arena-z-testnet-deprecated',
@@ -32201,8 +32197,7 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ],
-    iconURL:
-      'https://ipfs.io/ipfs/bafkreiboef4bxbv2nnnvi4zph7poolk6kyno5qycnjzvbyep3gv6zkd2qa'
+    iconURL: undefined
   },
   12324: {
     name: 'L3X Protocol',
@@ -34096,8 +34091,7 @@ export const chains: Chains = {
         icon: 'titan_tkx'
       }
     ],
-    iconURL:
-      'https://ipfs.io/ipfs/bafkreicyvc7t55zsejv6vwaxbmhvea5vdfkkbgqkmn65rhyyifpg3mq3ua'
+    iconURL: undefined
   },
   19011: {
     name: 'HOME Verse Mainnet',
