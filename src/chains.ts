@@ -5111,10 +5111,10 @@ export const chains: Chains = {
   },
   237: {
     name: 'AEREDIUM',
-    chain: 'AER',
-    rpc: ['https://rpc.aeredium.io'],
+    chain: 'AERX',
+    rpc: [],
     faucets: [],
-    nativeCurrency: { name: 'AER', symbol: 'AER', decimals: 18 },
+    nativeCurrency: { name: 'AERX', symbol: 'AERX', decimals: 18 },
     features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
     infoURL: 'https://aeredium.io',
     shortName: 'aer',
@@ -13291,6 +13291,30 @@ export const chains: Chains = {
     explorers: [],
     iconURL:
       'https://ipfs.io/ipfs/bafkreigxt4h4f6jbkvvntnr4izd43gr4jfyvyrstm7ran6sqe4j42ax7za'
+  },
+  1237: {
+    name: 'AEREDIUM Testnet',
+    title: 'AEREDIUM Testnet',
+    chain: 'AER',
+    rpc: ['https://testnet.rpc.aeredium.io'],
+    faucets: ['https://aeredium.io/faucet.html'],
+    nativeCurrency: { name: 'Testnet AER', symbol: 'tAER', decimals: 18 },
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    infoURL: 'https://aeredium.io',
+    shortName: 'aer-testnet',
+    chainId: 1237,
+    networkId: 1237,
+    slip44: 1,
+    icon: 'aeredium',
+    explorers: [
+      {
+        name: 'AEREDIUM Testnet Explorer',
+        url: 'https://testnet.explorer.aeredium.io',
+        standard: 'EIP3091'
+      }
+    ],
+    iconURL:
+      'https://ipfs.io/ipfs/QmdgJ7rPvUdnGnKowPKYo5e9oaPytVXV5cXd8fmAtVQKRY'
   },
   1243: {
     name: 'ARC Mainnet',
@@ -23238,6 +23262,36 @@ export const chains: Chains = {
     iconURL:
       'https://ipfs.io/ipfs/bafybeigx76uxvcvet7365sjdzuxxcgl5auzck6vbbigu2jeg6ixl5k3tya'
   },
+  4663: {
+    name: 'Robinhood Chain',
+    chain: 'ETH',
+    rpc: ['https://rpc.mainnet.chain.robinhood.com'],
+    faucets: [],
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    infoURL: 'https://docs.robinhood.com/chain',
+    shortName: 'robinhoodchain',
+    chainId: 4663,
+    networkId: 4663,
+    explorers: [
+      {
+        name: 'blockscout',
+        url: 'https://robinhoodchain.blockscout.com',
+        icon: 'blockscout',
+        standard: 'EIP3091'
+      }
+    ],
+    status: 'active',
+    parent: {
+      type: 'L2',
+      chain: 'eip155-1',
+      bridges: [
+        {
+          url:
+            'https://portal.arbitrum.io/bridge?destinationChain=robinhood-chain&sourceChain=ethereum'
+        }
+      ]
+    }
+  },
   4689: {
     name: 'IoTeX Network Mainnet',
     chain: 'iotex.io',
@@ -25179,15 +25233,26 @@ export const chains: Chains = {
   6122: {
     name: 'Tea Mainnet',
     chain: 'TEA',
-    rpc: [],
+    rpc: ['https://rpc.tea.xyz', 'https://tea.drpc.org'],
     faucets: [],
     nativeCurrency: { name: 'Tea', symbol: 'TEA', decimals: 18 },
     infoURL: 'https://tea.xyz',
     shortName: 'tea',
+    icon: 'tea',
     chainId: 6122,
     networkId: 6122,
+    explorers: [
+      {
+        name: 'blockscout',
+        url: 'https://explorer.tea.xyz',
+        icon: 'blockscout',
+        standard: 'EIP3091'
+      }
+    ],
     parent: { type: 'L2', chain: 'eip155-1' },
-    status: 'incubating'
+    status: 'active',
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreihmgtifbavavexido3aww2ga35z7qsn5yl2pbwx4iv5fmyn76eieq'
   },
   6278: {
     name: 'Rails',
@@ -51449,6 +51514,19 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ]
+  },
+  900190: {
+    name: 'CryptoChain',
+    chain: 'CRTC',
+    rpc: ['http://13.233.105.56:8545'],
+    faucets: [],
+    nativeCurrency: { name: 'CryptoChain Token', symbol: 'CRTC', decimals: 18 },
+    infoURL: '',
+    shortName: 'cryptochain',
+    chainId: 900190,
+    networkId: 900190,
+    slip44: 60,
+    explorers: []
   },
   910000: {
     name: 'Posichain Testnet Shard 0',
