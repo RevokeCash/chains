@@ -3317,7 +3317,9 @@ export const chains: Chains = {
     rpc: [
       'https://rpc.soniclabs.com',
       'https://sonic-rpc.publicnode.com',
-      'wss://sonic-rpc.publicnode.com'
+      'wss://sonic-rpc.publicnode.com',
+      'https://sonic.drpc.org',
+      'wss://sonic.drpc.org'
     ],
     faucets: [],
     nativeCurrency: { name: 'Sonic', symbol: 'S', decimals: 18 },
@@ -12138,6 +12140,7 @@ export const chains: Chains = {
   1062: {
     name: 'Bighive Mainnet',
     chain: 'BIGHIVE',
+    icon: 'bighive',
     rpc: ['https://rpc.bighive-beets.io/osc'],
     faucets: [],
     nativeCurrency: { name: 'Beets', symbol: 'BEETS', decimals: 18 },
@@ -12152,7 +12155,9 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ],
-    status: 'incubating'
+    status: 'incubating',
+    iconURL:
+      'https://ipfs.io/ipfs/Qme7zkCnNpG849A3ewKGn3VmxvWbKqbDQk44VpntLYBHZe'
   },
   1071: {
     name: 'OpenGPU Mainnet',
@@ -13643,6 +13648,35 @@ export const chains: Chains = {
         standard: 'none'
       }
     ]
+  },
+  1247: {
+    name: 'Miracle Chain Mainnet',
+    chain: 'MIRX',
+    icon: 'mirx',
+    rpc: ['https://rpc.miraclechain.com/http', 'wss://rpc.miraclechain.com/ws'],
+    faucets: [],
+    nativeCurrency: { name: 'PNIC', symbol: 'PNIC', decimals: 18 },
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    infoURL: 'https://miraclechain.com',
+    shortName: 'MIRX',
+    chainId: 1247,
+    networkId: 1247,
+    status: 'active',
+    explorers: [
+      {
+        name: 'MIRX Scan',
+        url: 'https://mirxscan.com',
+        icon: 'mirx',
+        standard: 'EIP3091'
+      }
+    ],
+    parent: {
+      type: 'L2',
+      chain: 'eip155-42161',
+      bridges: [{ url: 'https://hub.miraclechain.com' }]
+    },
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreiej5lqp7y6buzysipax72nh4cvxlv55c63waxd5cwwpw45d3utes4'
   },
   1248: {
     name: 'Dogether Mainnet',
@@ -20642,6 +20676,7 @@ export const chains: Chains = {
     name: 'CandyChain',
     shortName: 'candy',
     chain: 'CANDY',
+    icon: 'candychain',
     chainId: 2828,
     networkId: 2828,
     rpc: ['https://publicrpc.candychain.io'],
@@ -20654,7 +20689,9 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ],
-    infoURL: 'https://candychain.io'
+    infoURL: 'https://candychain.io',
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreigx5uplvbnpfomj2jp4khjichspo5ltjjxeimnw2ithhjxa45iv24'
   },
   2868: {
     name: 'HyperAGI Mainnet',
@@ -20810,6 +20847,43 @@ export const chains: Chains = {
     ],
     iconURL:
       'https://ipfs.io/ipfs/QmNSoxDnj6MV8mPJWiuzzLbATcbk5op11NTwMTdzcr272F'
+  },
+  2966: {
+    name: 'AXON Finance',
+    chain: 'AXON',
+    rpc: [],
+    faucets: [],
+    nativeCurrency: { name: 'AXON', symbol: 'AXON', decimals: 18 },
+    infoURL: 'https://axonfinance.xyz',
+    shortName: 'axon',
+    chainId: 2966,
+    networkId: 2966,
+    status: 'incubating',
+    icon: 'axon',
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreig3xtffhx5ltqxxujoxptph6jecsvzvmtuu6y7al2stzhdiltjdmu'
+  },
+  2967: {
+    name: 'AXON Finance Testnet',
+    chain: 'AXON',
+    rpc: ['https://rpc-testnet.axonfinance.xyz'],
+    faucets: ['https://faucet.axonfinance.xyz'],
+    nativeCurrency: { name: 'AXON', symbol: 'AXON', decimals: 18 },
+    infoURL: 'https://axonfinance.xyz',
+    shortName: 'axon-testnet',
+    chainId: 2967,
+    networkId: 2967,
+    status: 'active',
+    explorers: [
+      {
+        name: 'AXON Finance Testnet Explorer',
+        url: 'https://explorer-testnet.axonfinance.xyz',
+        standard: 'EIP3091'
+      }
+    ],
+    icon: 'axon',
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreig3xtffhx5ltqxxujoxptph6jecsvzvmtuu6y7al2stzhdiltjdmu'
   },
   2999: {
     name: 'BitYuan Mainnet',
@@ -23878,7 +23952,8 @@ export const chains: Chains = {
       'https://robinhood-rpc.publicnode.com',
       'wss://robinhood-rpc.publicnode.com',
       'https://rpc.arrowrpc.com',
-      'https://rpc.ordofi.network'
+      'https://rpc.ordofi.network',
+      'wss://rpc.ordofi.network'
     ],
     faucets: [],
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
@@ -24437,14 +24512,27 @@ export const chains: Chains = {
     name: 'Arc',
     chain: 'Arc',
     icon: 'arcnetwork',
-    rpc: [],
+    rpc: [
+      'https://rpc.mainnet.arc.io',
+      'https://rpc.blockdaemon.mainnet.arc.io',
+      'https://rpc.drpc.mainnet.arc.io',
+      'https://rpc.quicknode.mainnet.arc.io',
+      'https://rpc.beamrpc.com',
+      'wss://rpc.beamrpc.com'
+    ],
     faucets: [],
     nativeCurrency: { name: 'USDC', symbol: 'USDC', decimals: 18 },
-    infoURL: 'https://arc.network',
+    infoURL: 'https://arc.io',
     shortName: 'arc-mainnet',
     chainId: 5042,
     networkId: 5042,
-    explorers: [],
+    explorers: [
+      {
+        name: 'Arc Explorer',
+        url: 'https://explorer.arc.io',
+        standard: 'EIP3091'
+      }
+    ],
     iconURL:
       'https://ipfs.io/ipfs/bafybeiddgoql2bcngs3bcuxobz5hkjjbhvwxvqrdagqytdnfmmawnmfhta'
   },
@@ -53236,6 +53324,35 @@ export const chains: Chains = {
     ],
     iconURL:
       'https://ipfs.io/ipfs/QmXM7XiLdSxhCub8MLSSo2J9V2qAkTcwdAGxcT57kurUzg'
+  },
+  886699: {
+    name: 'Miracle Chain Testnet',
+    chain: 'MIRX',
+    icon: 'mirx',
+    rpc: ['https://rpc.miraclechain.dev/http', 'wss://rpc.miraclechain.dev/ws'],
+    faucets: ['https://hub.miraclechain.dev'],
+    nativeCurrency: { name: 'PNIC', symbol: 'PNIC', decimals: 18 },
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
+    infoURL: 'https://miraclechain.com',
+    shortName: 'MIRXTEST',
+    chainId: 886699,
+    networkId: 886699,
+    status: 'active',
+    explorers: [
+      {
+        name: 'MIRX Scan Testnet',
+        url: 'https://dev.mirxscan.com',
+        icon: 'mirx',
+        standard: 'EIP3091'
+      }
+    ],
+    parent: {
+      type: 'L2',
+      chain: 'eip155-421614',
+      bridges: [{ url: 'https://hub.miraclechain.dev' }]
+    },
+    iconURL:
+      'https://ipfs.io/ipfs/bafkreiej5lqp7y6buzysipax72nh4cvxlv55c63waxd5cwwpw45d3utes4'
   },
   888882: {
     name: 'REXX Mainnet',
